@@ -1,0 +1,441 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Navbar */
+.myNavbar {
+    padding: 15px 0px;
+    background-color: #ece6e6;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.myNavbar .myContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myNavbar .myContainer .myLogo h3 {
+    font-size: 1.5em;
+}
+
+.myNavbar .myContainer .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleBar {
+    font-size: 1.6em;
+    display: none;
+    transition: cursor 0.6s;
+}
+
+.toggleBar:hover {
+    cursor: pointer;
+}
+
+.ourVision {
+    background-color: #2f6d91da;
+    color: white;
+    /* padding: 30px 10px; */
+}
+
+.ourVisionDiv h3 {
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-align: left;
+    margin-bottom: 25px;
+    /* margin: 40px auto; */
+}
+
+.ourVisionDiv p {
+    font-weight:300;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.parallaxImg {
+    background-image: url('../images/parallaxImg.jpg');
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-origin: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxImg img {
+    width: 100%;
+}
+
+.contact {
+    position: relative;
+    background: url('../images/contactBgImage.jpg') no-repeat center center / cover;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2f6d91da;
+    width: 100%;
+    height: 100%;
+}
+
+.contact .myContainer * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    z-index: 50;
+}
+
+.contactDiv .left__side h3 {
+    font-weight: 500;
+    color: white;
+}
+
+.contactDiv .right__side h4 {
+    font-weight: 300;
+    color: white;
+}
+
+.contactDiv .right__side h4 span {
+    font-weight: 600;
+}
+
+.contactDiv .right__side .addressDiv p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px 0px;
+    color: white;
+}
+
+.contactDiv .right__side .clickToFind a {
+    text-decoration: underline;
+    font-size: 1.4rem;
+    color: white;
+}
+
+form label {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.backUpTop .myContainer i {
+    font-weight: 600;
+}
+
+.backUpTop .myContainer i:hover {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+form div input, textarea {
+    border: 3px solid #223755;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+/* Non mobile */
+.myNavbar .myContainer .links a {
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Desktop Scree Size Starts */
+@media screen and (min-width: 900px) {
+    .heroSection {
+        position: relative;
+        background-image: url('../images/heroImage.jpg');
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-origin: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 85vh;
+        display: flex;
+        justify-content: start;
+        align-items: left;
+        /* background-color: #ffffff;
+        background: url('../images/heroImage.jpg') no-repeat center center / cover; */
+    }
+
+    .heroSection .myContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        z-index: 50;
+        padding: 10px 50px;
+        background-attachment: fixed;
+    }
+
+    .heroSection::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background: rgba(47, 109, 145, 0.78);
+        width: 40%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .heroSection .myContainer h3 span {
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 10px 0px;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    .heroSection .myContainer h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+        margin-top: 180px;
+        text-transform: uppercase;
+    }
+
+    .heroSection .myContainer p {
+        color: white;
+        max-width: 320px;
+        margin: 15px 0px;
+        font-size: 1.4rem;
+    }
+
+    .practiceArea .myContainer .practiceArreaDiv {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+    }
+
+    .practiceArreaDiv .right__side ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .ourVision .myContainer .ourVisionDiv h3 {
+        text-align: center;
+    }
+
+    .ourVision .myContainer .ourVisionDiv div {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .ourAttorneys .myContainer .attorneysDiv {
+        margin: ;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ourAttorneys .myContainer .attorneysDiv .attCard {
+        width: 300px;
+    }
+
+    .ourAttorneys .myContainer .attorneysDiv .attCard img {
+        width: 100%;
+    }
+
+}
+
+
+/* Desktop Screen Size Ends */
+
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .myNavbar .myContainer .links {
+        display: none;
+    }
+
+    .toggleBar {
+        display: block;
+    }
+
+    .heroSection {
+        position: relative;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        background: url('../images/heroImage.jpg') no-repeat center center / cover;
+    }
+
+    .heroSection .myContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        z-index: 50;
+    }
+
+    .heroSection::before {
+        position: absolute;
+        content: "";
+        top: 50;
+        /* bottom: 40; */
+        right: 0;
+        background: rgba(47, 109, 145, 0.78);
+        width: 95%;
+        height: 70%;
+        z-index: 0;
+    }
+
+    .heroSection .myContainer h3 span {
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 10px 0px;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    .heroSection .myContainer h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .heroSection .myContainer p {
+        color: white;
+        max-width: 320px;
+        margin: 15px 0px;
+        font-size: 1.4rem;
+    }
+
+    .practiceArreaDiv .left__side h3 span {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        margin: 5px 0px;
+    }
+
+    .left__side h3 {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .right__side {
+        padding: 30px 10px;
+        /* background-color: white; */
+    }
+
+    .parallaxImg {
+        background-image: url('../images/parallaxImg.jpg');
+        min-height: 500px; 
+        background-attachment: scroll;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .attorneysDiv {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .ourAttorneys .myContainer h3 {
+        text-align: center;
+        font-size: 2.8em;
+        font-weight: 350;
+        margin-bottom: 25px;
+    }
+
+    .attCard {
+        width: 100%;
+        padding: 0px 20px;
+        margin: 0px auto 35px auto;
+        /* text-align: center; */
+    }
+
+    .attCard img {
+        min-height: 200px;
+        width: 100%;
+    }
+
+    .attCard .firstDiv {
+        padding: 10px 0px 0px 0px;
+        text-align: center;
+        border-bottom: 2px solid #6991ac9d;
+    }
+
+    .secondDiv {
+        text-align: center;
+        padding: 5px 0px;
+    }
+
+    form {
+        /* background: pink; */
+        max-width: 100%;
+    }
+
+    form div {
+        margin: 7px 0px;
+        /* padding: 0px 5px; */
+        max-width: 100%;
+    }
+
+    form label {
+        display: block;
+        color: white;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    form input {
+        padding: 5px 10px;
+    }
+
+    form .right__side textarea {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    
+
+
+}
