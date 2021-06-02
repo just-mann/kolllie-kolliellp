@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: rgb(255, 255, 255); */
+}
+
+/* Navbar */
+.myNavbar {
+    background-color: rgb(236, 228, 229);
+}
+
+.myNavbar .myContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myNavbar .myContainer .myLogo h3 {
+    font-size: 2.5rem;
+}
+
+.myNavbar .myContainer .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleBar {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .myNavbar .myContainer .links {
+        display: none;
+    }
+
+    .toggleBar {
+        display: block;
+    }
+}

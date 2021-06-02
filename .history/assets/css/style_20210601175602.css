@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: rgb(255, 255, 255); */
+}
+
+/* Navbar */
+.myNavbar {
+    padding: 10px 0px;
+    background-color: #ffffff;
+}
+
+.myNavbar .myContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myNavbar .myContainer .myLogo h3 {
+    font-size: 1.5em;
+}
+
+.myNavbar .myContainer .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleBar {
+    font-size: 1.6em;
+    display: none;
+    transition: cursor 0.6s;
+}
+
+.toggleBar:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .myNavbar .myContainer .links {
+        display: none;
+    }
+
+    .toggleBar {
+        display: block;
+    }
+
+    .heroSection {
+        position: relative;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        background: url('../images/heroImage.jpg') no-repeat center center / cover;
+    }
+
+    .heroSection .myContainer * {
+        z-index: 100;
+    }
+
+    .heroSection::before {
+        position: absolute;
+        content: "";
+        top: 40;
+        bottom: 40;
+        right: 0;
+        background: rgba(54, 175, 206, 0.4);
+        width: 80%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    .heroSection .myContainer h3 {
+        color: white;
+        font-size: 2.5rem;
+    }
+    .heroSection .myContainer p {
+        color: white;
+    }
+
+
+}

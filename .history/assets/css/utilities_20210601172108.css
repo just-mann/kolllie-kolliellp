@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: ;
+}
+
+.myContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 25px;
+}
